@@ -1,7 +1,4 @@
-// @ts-nocheck
-import { CopyrightIcon, Github, LocateFixed, Mail, Send } from "lucide-react"
 import Header from "./components/Header"
-import { Button } from "./components/ui/button"
 import {
   TableBody,
   TableCaption,
@@ -12,162 +9,25 @@ import {
   Table,
 } from "./components/ui/table"
 import { Progress } from "./components/ui/progress"
-import { Input } from "./components/ui/input"
-import { Textarea } from "./components/ui/textarea"
-import { Label } from "@radix-ui/react-dropdown-menu"
 import { ScrollArea } from "./components/ui/scroll-area"
-import { PhoneCall } from "lucide-react"
-
-const skillsAndProgress = [
-  {
-    skill: "HTML and JavaScript",
-    purpose: "Languages of the Web",
-    progress: 99,
-  },
-  {
-    skill: "JQuery and Bootstrap",
-    purpose: "Old School libraries for Dom manipulation and Styling",
-    progress: 80,
-  },
-  {
-    skill: "CSS and Tailwind",
-    purpose: "Popular Solutions for Styling in Web",
-    progress: 85,
-  },
-  {
-    skill: "TypeScript",
-    purpose: "TypeSafety for JavaScript to not get errors in production",
-    progress: 90,
-  },
-  {
-    skill: "React",
-    purpose: "Most Popular Front-end Framework for Building Web Apps",
-    progress: 95,
-  },
-  {
-    skill: "React Native",
-    purpose: "React for Mobile using Native components",
-    progress: 70,
-  },
-  {
-    skill: "Next JS",
-    purpose: "SSR framework for React with tons of features and Routing",
-    progress: 90,
-  },
-  {
-    skill: "Express JS and Fastify JS REST APIS",
-    purpose: "Backend Frameworks for barbones Node JS",
-    progress: 90,
-  },
-  {
-    skill: "GraphQL and TRPC",
-    purpose: "Modern way of building APIs not an expert in this",
-    progress: 70,
-  },
-  {
-    skill: "MongoDB and FireStore",
-    purpose: "NoSQL Databases I work with",
-    progress: 85,
-  },
-  {
-    skill: "SQL",
-    purpose: "Database query language for SQL Databases",
-    progress: 80,
-  },
-  {
-    skill: "MySQL, Postgres and SQLite",
-    purpose: "Some Popular SQL Databases I work with",
-    progress: 85,
-  },
-  {
-    skill: "Python",
-    purpose: "Python for Backend and Automation",
-    progress: 60,
-  },
-]
+import Footer from "./components/Footer"
+import LandingPage from "./components/LandingPage"
+import FlexLayout from "./components/FlexLayout"
+import techStackImages from "./data/techStackImages"
+import skillsAndProgress from "./data/skillsAndProgress"
+import toolsIUseImages from "./data/toolsIUse"
+import ContactSection from "./components/ContactSection"
 
 function App() {
   return (
     <>
       <Header></Header>
       <main>
-        <section className="flex justify-center sm:justify-around items-center flex-col sm:flex-row w-full h-[30rem] sm:h-96 gap-5">
-          <h1 className="text-center sm:text-left sm:w-[20ch]">
-            <code className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold">
-              &lt;Hey! My name is/&gt;
-            </code>
-            <span className="text-4xl block sm:text-7xl font-bold text-muted-foreground tracking-wide">
-              Syed Sheharyar
-            </span>
-          </h1>
-          <div className="text-center sm:text-justify">
-            <p className="mt-3 mb-3 w-2/3 sm:w-[50ch] m-auto opacity-70">
-              I am a fully passionate Fullstack developer with focus on learning
-              and building stuff. With knowledge of popular technologies use in
-              Industries I can provide high quality websites with all types of
-              functionality needed.
-            </p>
-            <a
-              href="https://github.com/Syed-Sheharyar"
-              target="_blank"
-              rel="noopener noreferrer">
-              <Button variant="link">
-                <Github
-                  size={20}
-                  className="mr-2"
-                />{" "}
-                Github
-              </Button>
-            </a>
-          </div>
-        </section>
-        <section className="relative flex justify-evenly bg-secondary p-10">
-          <div className="absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 opacity-40 text-muted-foreground font-bold background text-3xl sm:text-6xl md:text-7xl">
-            Tech Stack
-          </div>
-          <img
-            className="z-10"
-            loading="lazy"
-            src="typescript.png"
-            alt="TypeScript Logo"
-            width={40}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="tailwind.jpg"
-            alt="Tailwind Logo"
-            width={50}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="next.png"
-            alt="Next.JS Logo"
-            width={60}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="react.png"
-            alt="React Logo"
-            width={50}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="node.png"
-            alt="React Logo"
-            width={50}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="python.png"
-            alt="React Logo"
-            width={50}
-          />
-        </section>
+        <LandingPage />
+        <FlexLayout
+          title="Tech Stack"
+          images={techStackImages}
+        />
         <section className="w-full flex items-center flex-col justify-center gap-10 sm:flex-row p-10 sm:h-screen">
           <div className="w-full sm:w-2/4">
             <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-muted-foreground">
@@ -184,8 +44,8 @@ function App() {
               Electron JS.
             </p>
             <p className="text-justify mt-3">
-              Played with Svelte and Svelte-kit as well. I stick with one
-              language to ensure increase in indepth concepts of that language
+              Played with Svelte and Svelte kit as well. I stick with one
+              language to ensure increase in Indepth concepts of that language
               like Promises in JS.{" "}
               <b>
                 <em>
@@ -200,7 +60,7 @@ function App() {
               Education
             </h2>
             <p className="text-justify mt-3">
-              As I always a topper in my class and finished my HighSchool from{" "}
+              As I always a topper in my class and finished my High School from{" "}
               <b>
                 Metropolitan School <em>(Maymar Campus)</em>
               </b>{" "}
@@ -242,93 +102,13 @@ function App() {
             </Table>
           </ScrollArea>
         </section>
-        <section className="relative flex justify-evenly bg-secondary p-10">
-          <div className="absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 opacity-40 text-muted-foreground font-bold background text-3xl sm:text-6xl md:text-7xl">
-            Tools I use
-          </div>
-          <img
-            className="z-10"
-            loading="lazy"
-            src="git.png"
-            alt="Git Logo"
-            width={60}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="github.png"
-            alt="Github Logo"
-            width={60}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="vscode.jpg"
-            alt="VSCode Logo"
-            width={50}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="docker.jpg"
-            alt="Docker Logo"
-            width={60}
-          />
-          <img
-            className="z-10"
-            loading="lazy"
-            src="postman.png"
-            alt="Postman Logo"
-            width={80}
-          />
-        </section>
-        <section className="w-full pb-5 flex justify-center flex-col sm:flex-row">
-          <div className="sm:w-2/4 p-5 sm:pl-10 text-center sm:text-left">
-            <h2 className="font-semibold text-3xl">Contact Me</h2>
-            <address className="mt-2 mb-3 opacity-70">
-              <LocateFixed className="m-1 inline" /> Flat C-721, Phase-3,
-              Diamond Tower, Diamond Society, Sector-W, Gulshan-e-Maymar,
-              Karachi.
-            </address>
-            <a
-              className="block"
-              href="mailto:syedsheharyartariq146@gmail.com">
-              <Button variant="link">
-                <Mail className="mr-2" /> syedsheharyartariq146@gmail.com
-              </Button>
-            </a>{" "}
-            <a href="tel:03002633828">
-              <Button variant="link">
-                <PhoneCall className="mr-2" />
-                03002633828
-              </Button>
-            </a>
-          </div>
-          <form
-            name="contact"
-            className="sm:w-2/4 border p-5 flex flex-col gap-3 bg-secondary"
-            netlify>
-            <Label>Email</Label>
-            <Input
-              className="border-b-2 border-b-muted-foreground"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"></Input>
-            <Label>Message</Label>
-            <Textarea
-              className="border-b-2 border-b-muted-foreground"
-              id="message"
-              name="message"
-              placeholder="Your Message..."></Textarea>
-              <Button type="submit">Send Message <Send className="ml-2" size={18}/></Button>
-          </form>
-        </section>
-        <footer className="flex justify-center gap-2 p-3 text-sm">
-          Made by Syed Sheharyar <CopyrightIcon size="10"></CopyrightIcon> All
-          Rights Reserved
-        </footer>
+        <FlexLayout
+          title="Tools I Use"
+          images={toolsIUseImages}
+        />
+        <ContactSection />
       </main>
+      <Footer />
     </>
   )
 }
