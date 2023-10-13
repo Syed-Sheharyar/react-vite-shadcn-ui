@@ -18,7 +18,7 @@ export interface FlexLayoutProps {
 
 export default function FlexLayout(props: FlexLayoutProps) {
   return (
-    <section className="relative flex justify-evenly bg-secondary p-10">
+    <section className="relative flex justify-around bg-secondary p-10 min-h-[8rem]">
       <div className="absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 opacity-40 text-muted-foreground font-bold background text-3xl sm:text-6xl md:text-7xl">
         {props.title}
       </div>

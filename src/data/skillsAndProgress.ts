@@ -16,7 +16,7 @@ const skillsAndProgress = [
   },
   {
     skill: "TypeScript",
-    purpose: "TypeSafety for JavaScript to not get errors in production",
+    purpose: "Type Safety for JavaScript to not get errors in production",
     progress: 90,
   },
   {

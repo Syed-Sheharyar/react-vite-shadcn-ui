@@ -17,6 +17,13 @@ import techStackImages from "./data/techStackImages"
 import skillsAndProgress from "./data/skillsAndProgress"
 import toolsIUseImages from "./data/toolsIUse"
 import ContactSection from "./components/ContactSection"
+import SkillsIPossess from "./components/SkillsIPossess"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./components/ui/accordion"
 
 function App() {
   return (
@@ -28,48 +35,7 @@ function App() {
           title="Tech Stack"
           images={techStackImages}
         />
-        <section className="w-full flex items-center flex-col justify-center gap-10 sm:flex-row p-10 sm:h-screen">
-          <div className="w-full sm:w-2/4">
-            <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-muted-foreground">
-              About My Skills
-            </h2>
-            <p className="text-justify mt-3">
-              As I am a FullStack developer with more than 2 year's of
-              Experience in building stuff with JS Tech Stack mainly MERN, PERN
-              or React with Next JS Specialized in both Front-end and back-end.
-              Have a good understanding of implementing APIs and HTTP Protocol
-              and how to communicate with them in Front-end. With solid
-              understanding of JS and TS I can built almost anything including
-              Mobile APPs using React Native or Capacitor or Desktop Apps using
-              Electron JS.
-            </p>
-            <p className="text-justify mt-3">
-              Played with Svelte and Svelte kit as well. I stick with one
-              language to ensure increase in Indepth concepts of that language
-              like Promises in JS.{" "}
-              <b>
-                <em>
-                  Languages are just Tools that can be learn as needed. Have a
-                  good knowledge of Python as well.
-                </em>
-              </b>
-            </p>
-          </div>
-          <div className="w-full sm:w-2/4">
-            <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-muted-foreground">
-              Education
-            </h2>
-            <p className="text-justify mt-3">
-              As I always a topper in my class and finished my High School from{" "}
-              <b>
-                Metropolitan School <em>(Maymar Campus)</em>
-              </b>{" "}
-              as Result announced by Sindh Board recently. I pass the class with
-              A1 grade and 82% and got a great result. I am fluent in speaking
-              English and Urdu is our National Language.
-            </p>
-          </div>
-        </section>
+        <SkillsIPossess />
         <section className="w-full pb-10 flex items-center flex-col">
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-muted-foreground">
             Skills I Possess
@@ -101,6 +67,82 @@ function App() {
               </TableBody>
             </Table>
           </ScrollArea>
+        </section>
+        <section className="flex w-4/5 sm:w-2/4 flex-col justify-center items-center h-screen m-auto">
+          <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-muted-foreground">
+            FAQs
+          </h2>
+          <Accordion
+            type="single"
+            className="w-full mt-2"
+            collapsible>
+            <AccordionItem value="opensource">
+              <AccordionTrigger>
+                Do you have any Open Source Contributions to your name?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes! You can take a look at my{" "}
+                <a
+                  href="https://github.com/Syed-Sheharyar"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Github
+                </a>{" "}
+                I had few Contributions to my name. You also find this website
+                code in this{" "}
+                <a
+                  href="https://github.com/Syed-Sheharyar/sheharyar-resume"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  repo.
+                </a>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="docker">
+              <AccordionTrigger>
+                Do you have any experience with Containerization tools like
+                Docker?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes! I had experience with Docker and understanding of
+                Containerization concepts as well.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="learning">
+              <AccordionTrigger>
+                How you learn all these Languages and Tools?
+              </AccordionTrigger>
+              <AccordionContent>
+                As a self-taught developer I learn through Youtube Videos,
+                Documentation and Medium or dev.to articles. All are great
+                resources to be prepare yourself even for senior position in a
+                company.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="languages">
+              <AccordionTrigger>
+                Why you stick with one language and how better you now with TS?
+              </AccordionTrigger>
+              <AccordionContent>
+                I started Web dev 3 year's ago from now and go complete
+                full-stack with the same language as demand of TS increases I
+                switch my gears to Type Safety and never look back. I already
+                mentioned that I have some experience in Python as well.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="">
+              <AccordionTrigger>
+                You mention React Native and Electron JS are you good at both?
+              </AccordionTrigger>
+              <AccordionContent>
+                Yes! Because concepts are very similar for React Native for sure
+                I had played with React Native a little bit and have good basic
+                understanding of React Native's ecosystem. For, Electron JS
+                currently I am working on my side project with Electron paired
+                with React. So, yeah I am good at both.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
         <FlexLayout
           title="Tools I Use"

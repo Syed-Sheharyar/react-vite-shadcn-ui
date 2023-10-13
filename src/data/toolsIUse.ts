@@ -2,12 +2,12 @@ const toolsIUseImages = [
   {
     src: "git.png",
     alt: "Git Logo",
-    width: "60",
+    width: "50",
   },
   {
     src: "github.png",
     alt: "Github Logo",
-    width: "60",
+    width: "50",
   },
   {
     src: "vscode.jpg",
@@ -22,7 +22,7 @@ const toolsIUseImages = [
   {
     src: "postman.png",
     alt: "Postman Logo",
-    width: "80",
+    width: "50",
   },
 ]
 
