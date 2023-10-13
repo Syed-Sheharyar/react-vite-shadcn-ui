@@ -1,3 +1,10 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip"
+
 interface Image {
   src: string
   alt: string
@@ -16,13 +23,19 @@ export default function FlexLayout(props: FlexLayoutProps) {
         {props.title}
       </div>
       {props.images.map((img) => (
-        <img
-          className="z-10"
-          loading="lazy"
-          src={img.src}
-          alt={img.alt}
-          width={img.width}
-        />
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger className="z-10">
+              <img
+                loading="lazy"
+                src={img.src}
+                alt={img.alt}
+                width={img.width}
+              />
+            </TooltipTrigger>
+            <TooltipContent>{img.alt}</TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       ))}
     </section>
   )

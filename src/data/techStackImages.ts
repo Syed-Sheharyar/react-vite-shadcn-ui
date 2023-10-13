@@ -11,7 +11,7 @@ const techStackImages = [
   },
   {
     src: "next.png",
-    alt: "Next.JS Logo",
+    alt: "Next JS Logo",
     width: "60",
   },
   {

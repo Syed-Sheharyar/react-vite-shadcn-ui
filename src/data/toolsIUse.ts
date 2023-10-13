@@ -12,7 +12,7 @@ const toolsIUseImages = [
   {
     src: "vscode.jpg",
     alt: "VSCode Logo",
-    width: "50",
+    width: "60",
   },
   {
     src: "docker.jpg",
