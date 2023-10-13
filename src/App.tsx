@@ -320,7 +320,7 @@ function App() {
               id="message"
               name="message"
               placeholder="Your Message..."></Textarea>
-              <Button>Send Message <Send className="ml-2" size={18}/></Button>
+              <Button type="submit">Send Message <Send className="ml-2" size={18}/></Button>
           </form>
         </section>
         <footer className="flex justify-center gap-2 p-3 text-sm">
