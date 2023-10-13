@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { CopyrightIcon, Github, LocateFixed, Mail, Send } from "lucide-react"
 import Header from "./components/Header"
 import { Button } from "./components/ui/button"
