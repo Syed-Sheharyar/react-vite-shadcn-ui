@@ -7,11 +7,9 @@ export default function ContactSection() {
   return (
     <section className="w-full pb-5 flex justify-center flex-col sm:flex-row">
       <div className="sm:w-2/4 p-12 text-center sm:text-left">
-        <h2 className="font-semibold text-3xl">
-          Contact me
-        </h2>
+        <h2 className="font-semibold text-3xl">Contact me</h2>
         <address className="mt-2 mb-3 opacity-70">
-          <LocateFixed className="m-1 inline"/> Flat C-721, Phase-3, Diamond
+          <LocateFixed className="m-1 inline" /> Flat C-721, Phase-3, Diamond
           Tower, Diamond Society, Sector-W, Gulshan-e-Maymar, Karachi.
         </address>
         <a
@@ -31,7 +29,8 @@ export default function ContactSection() {
       <form
         name="contact"
         className="sm:w-2/4 p-5 flex flex-col gap-3 bg-secondary"
-        data-netlify="true">
+        data-netlify="true"
+        method="POST">
         <label htmlFor="email">Email</label>
         <Input
           className="border-b-2 border-b-muted-foreground"

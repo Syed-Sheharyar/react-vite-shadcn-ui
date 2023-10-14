@@ -130,7 +130,7 @@ function App() {
                 mentioned that I have some experience in Python as well.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="">
+            <AccordionItem value="others">
               <AccordionTrigger>
                 You mention React Native and Electron JS are you good at both?
               </AccordionTrigger>
