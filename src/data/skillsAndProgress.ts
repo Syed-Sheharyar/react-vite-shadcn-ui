@@ -60,9 +60,9 @@ const skillsAndProgress = [
     progress: 85,
   },
   {
-    skill: "Python",
-    purpose: "Python for Backend and Automation",
-    progress: 60,
+    skill: "Python and Flask",
+    purpose: "Python for Automation and AI and Flask for Backend",
+    progress: 70,
   },
 ]
  export default skillsAndProgress
