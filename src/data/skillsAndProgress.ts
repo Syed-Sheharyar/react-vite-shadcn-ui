@@ -30,13 +30,13 @@ const skillsAndProgress = [
     progress: 70,
   },
   {
-    skill: "Next JS",
+    skill: "Next JS and Remix JS",
     purpose: "SSR framework for React with tons of features and Routing",
     progress: 90,
   },
   {
     skill: "Express JS and Fastify JS REST APIS",
-    purpose: "Backend Frameworks for barbones Node JS",
+    purpose: "Backend Frameworks for barebones Node JS",
     progress: 90,
   },
   {
@@ -55,7 +55,7 @@ const skillsAndProgress = [
     progress: 80,
   },
   {
-    skill: "MySQL, Postgres and SQLite",
+    skill: "MySQL, Postgres, and SQLite",
     purpose: "Some Popular SQL Databases I work with",
     progress: 85,
   },
